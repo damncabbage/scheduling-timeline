@@ -1,0 +1,84 @@
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+/* Page */
+
+body {
+	background: #fffefe;
+	color: #020304;
+	text-align: justify;
+	font-size: 0.85em;
+	line-height: 1.4;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+.container {
+	margin: 40px auto;
+	width: 801px;
+}
+
+h1, h2, h3 {
+	font-family: Georgia, Verdana, serif;
+}
+
+h1 {
+	font-size: 4.05em;
+	font-weight: bold;
+	text-indent: -0.01em;
+	color: #626266;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 1.7em;
+	padding: 0 0 30px;
+	text-indent: -0.01em;
+	color: #938172;
+}
+
+h3 {
+	font-size: 1.4em;
+	padding: 0 0 15px;
+	color: #626266;
+}
+
+.container p, .container ul {
+	padding-bottom: 1em;
+}
+
+.container ul {
+	list-style: circle;
+	margin-left: 1.1em;
+}
+.container ul li {
+	margin: 3px 0;
+}
+
+a {
+	color: #541F14;
+	text-decoration: none;
+}
+a:hover, a:active {
+	border-bottom: 1px solid #541F14;
+}
+
+.heading {
+	width: 42em;
+}
+
+.body {
+	float: left;
+	width: 560px;
+	padding-right: 40px;
+}
+
+.sidebar {
+	float: left;
+	width: 200px;
+}
+

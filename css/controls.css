@@ -1,0 +1,147 @@
+/* Top Toolbar */
+
+#cms-toolbox {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	z-index: 500;
+	color: #eee;
+}
+#cms-toolbox .contents,
+#cms-toolbox .tabs li,
+.cms-module-placement .edit-control {
+	/*background: #2b2b2b;*/
+	background: #343434;
+}
+#cms-toolbox.hide {
+	/*top: -63px;*/
+}
+#cms-toolbox .tabs {
+	float: right;
+	margin-right: 30px;
+	display: block;
+	list-style: none;
+}
+#cms-toolbox .tabs li {
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+}
+#cms-toolbox .tabs li a {
+	display: block;
+	text-decoration: none;
+	border: 0;
+	color: #eee;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 3px 10px 8px 10px;
+}
+#cms-toolbox .tabs li a:hover,
+#cms-toolbox .tabs li a:active {
+}
+
+#cms-toolbox .contents .scheduling {
+	padding: 10px 0;
+}
+#cms-toolbox .scheduling ul.date-selection {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+}
+#cms-toolbox .scheduling ul.date-selection li {
+	display: inline;
+}
+
+#cms-toolbox .scheduling .timeline-container {
+	margin: 0px auto;
+	padding: 7px 0;
+	overflow: hidden;
+}
+#cms-toolbox .scheduling .bar {
+	height: 1px;
+	background: #000;
+	border-top: 3px solid #101010;
+	border-bottom: 2px solid #202020;
+	margin: 5px 0;
+	position: relative;
+}
+
+#cms-toolbox .scheduling .snapshot-container {
+	position: relative;
+	top: -14px;
+}
+#cms-toolbox .scheduling .snapshot {
+	/* It's a circle. */
+	display: block;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	width: 12px;
+	height: 12px;
+	background: #92bbbf;
+
+	position: absolute;
+	left: 100px;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+#cms-toolbox .scheduling .period-container {
+	position: relative;
+	top: -4px;
+}
+#cms-toolbox .scheduling .period {
+	float: left;
+	/*border-left: 1px solid #f7f7f7;*/
+	border-left: 1px solid #7b7b7b;
+	/*border-left: 1px solid #000;*/
+	height: 24px;
+}
+#cms-toolbox .scheduling .zoom-month .period {
+	width: 40px;
+}
+#cms-toolbox .scheduling .zoom-month .period .title {
+	width: 40px;
+	color: #7b7b7b;
+}
+#cms-toolbox .scheduling .period .title {
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	position: absolute;
+	top: -15px;
+}
+
+#cms-toolbox .scheduling .date-selection {
+	
+}
+
+
+/* Editing Controls */
+
+.cms-module-placement {
+	position: relative;
+}
+.cms-module-placement .edit-control {
+	position: absolute;
+	right: 0;
+	text-align: right;
+	/*background: #040408;*/
+	color: #eee;
+	line-height: 30px;
+	font-size: 14px;
+	padding: 0 10px 0 30px;
+	background-image: url(../images/icons/edit.png);
+	background-repeat: no-repeat;
+	border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	cursor: pointer; /* It's a faaaaaake. */
+}
+.cms-module-placement .edit-control.hide {
+	display: none;
+	opacity: 0;
+}
+
