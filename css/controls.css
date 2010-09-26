@@ -12,8 +12,7 @@
 #cms-toolbox .contents,
 #cms-toolbox .tabs li,
 .cms-module-placement .edit-control {
-	/*background: #2b2b2b;*/
-	background: #343434;
+	background: #2b2b2b;
 }
 #cms-toolbox.hide {
 	/*top: -63px;*/
@@ -57,15 +56,15 @@
 }
 
 #cms-toolbox .scheduling .timeline-container {
+	clear: both;
 	margin: 0px auto;
 	padding: 7px 0;
 	overflow: hidden;
 }
 #cms-toolbox .scheduling .bar {
 	height: 1px;
-	background: #000;
-	border-top: 3px solid #101010;
-	border-bottom: 2px solid #202020;
+	border-top: 1px solid #5b5b5b;
+	background: #343434;
 	margin: 5px 0;
 	position: relative;
 }
@@ -116,8 +115,42 @@
 }
 
 #cms-toolbox .scheduling .date-selection {
-	
+	margin: 0 auto;
+	display: block;
+	width: 400px;
 }
+#cms-toolbox .scheduling .date-selection a {
+	color: #ababab;
+	border-radius: 4px;
+	padding: 5px 15px;
+	display: block;
+	float: left;
+	margin: 0 2px;
+	border: 1px solid #2b2b2b;
+}
+
+#cms-toolbox .scheduling .date-selection .zoom-control {
+}
+#cms-toolbox .scheduling .date-selection .selected a {
+	background: #4b4b4b;
+	color: #efefef;
+}
+#cms-toolbox .scheduling .date-selection a:hover {
+	color: #efefef;
+	border: 1px solid #9b9b9b;
+	text-shadow: 0 0 3px #9b9b9b;
+	-webkit-text-shadow: 0 0 3px #9b9b9b;
+	-moz-text-shadow: 0 0 3px #9b9b9b;
+}
+
+#cms-toolbox .scheduling .date-selection .button a {
+	border: 1px solid #4b4b4b;
+}
+
+#cms-toolbox .scheduling .date-selection .button a:hover {
+	border: 1px solid #9b9b9b;
+}
+
 
 
 /* Editing Controls */

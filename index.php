@@ -13,10 +13,12 @@
 			<div class="scheduling">
 
 				<ul class="date-selection">
-					<li>+</li>
-					<li>January</li>
-					<li>2011</li>
-					<li>-</li>
+					<li class="button prev"><a href="#">&laquo;</a></li>
+					<li class="zoom-control time"><a href="#">9:00am</a></li>
+					<li class="zoom-control day"><a href="#">16th</a></li>
+					<li class="zoom-control month selected"><a href="#">July</a></li>
+					<li class="zoom-control year selected"><a href="#">2011</a></li>
+					<li class="button next"><a href="#">&raquo;</a></li>
 				</ul>
 
 				<div class="timeline-container zoom-month">
