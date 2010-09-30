@@ -1,0 +1,211 @@
+/* Colour Settings */
+
+$control_bg: #2b2b2b;
+
+
+/* Convenience Mixins */
+@mixin border-radius($px) {
+	border-radius: $px;
+	-moz-border-radius: $px;
+	-webkit-border-radius: $px;
+}
+@mixin border-radius-bottom-left($px) {
+	border-bottom-left-radius: $px;
+	-moz-border-radius-bottomleft: $px;
+}
+@mixin border-radius-bottom-right($px) {
+	border-bottom-right-radius: $px;
+	-moz-border-radius-bottomright: $px;
+}
+@mixin glow($px, $color) {
+	text-shadow: 0 0 $px $color;
+	-webkit-text-shadow: 0 0 $px $color;
+	-moz-text-shadow: 0 0 $px $color;
+}
+
+
+/* Top Toolbar */
+
+/* Reset */
+#cms-toolbox {
+	div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:900 }
+	ol,ul { list-style:none }
+	blockquote,q { quotes:none }
+	blockquote:before,blockquote:after,q:before,q:after { content:none }
+	table { border-collapse:collapse;border-spacing:0 } 
+}
+
+#cms-toolbox {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	z-index: 500;
+	color: #eee;
+	.tabs {
+		float: right;
+		margin-right: 30px;
+		display: block;
+		list-style: none;
+		li {
+			background: $control_bg;
+			@include border-radius-bottom-left(6px);
+			@include border-radius-bottom-right(6px);
+			a {
+				display: block;
+				text-decoration: none;
+				border: 0;
+				color: #eee;
+				font-weight: bold;
+				font-size: 18px;
+				padding: 3px 10px 8px 10px;
+				&:hover, &:active {
+				}
+			}
+		}
+	}
+	.contents {
+		background: $control_bg;
+	}
+}
+
+#cms-toolbox .scheduling {
+	padding: 5px 0;
+
+	ul.date-selection {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 14px;
+		li {
+			display: inline;
+		}
+	}
+
+	.timeline-container {
+		clear: both;
+		margin: 0px auto;
+		padding: 7px 0;
+		overflow: hidden;
+	}
+	.bar {
+		clear: both;
+		height: 1px;
+		border-top: 1px solid #5b5b5b;
+		background: #343434;
+		margin: 5px 0;
+		position: relative;
+		top: -12px;
+		.control {
+		}
+	}
+
+	.snapshot-container {
+		position: relative;
+		top: -24px;
+		.snapshot {
+			/* It's a circle. */
+			display: block;
+			@include border-radius(6px);
+			width: 12px;
+			height: 12px;
+			/*background: #51686b;*/
+			background: #6a888b;
+			position: absolute;
+			left: 100px;
+			overflow: hidden;
+			text-indent: -9999px;
+			&:hover {
+				background: #92bbbf;
+			}
+		}
+	}
+
+	.period-container {
+		margin-left: 3%;
+	}
+	.period {
+		float: left;
+		height: 24px;
+		border-left: 1px solid #5b5b5b;
+		border-right: 1px solid #3b3b3b;
+		&.last {
+			border-right: 1px solid #5a5a5a;
+		}
+		.title {
+			color: #7b7b7b;
+			display: block;
+			text-align: center;
+			font-size: 10px;
+			position: absolute;
+			top: -15px;
+		}
+	}
+	.zoom-month-30 .period {
+		width: 3.05%
+	}
+}
+
+#cms-toolbox .scheduling .date-selection {
+	margin: 0 auto;
+	display: block;
+	width: 430px;
+	a {
+		color: #ababab;
+		@include border-radius(4px);
+		padding: 5px 15px;
+		display: block;
+		float: left;
+		margin: 0 2px;
+		border: 1px solid #2b2b2b;
+		&:hover {
+			color: #efefef;
+			border: 1px solid #9b9b9b;
+			@include glow(3px, #9b9b9b);
+			background: #393939;
+		}
+	}
+
+	.button a {
+		border: 1px solid #5b5b5b;
+	}
+
+	.zoom-control {
+		&.selected a {
+			background: #5b5b5b;
+			color: #efefef;
+		}
+		&.time a  { width: 56px; }
+		&.day a   { width: 29px; }
+		&.month a { width: 70px; }
+		&.year a  { width: 33px; }
+	}
+}
+
+
+
+/* Editing Controls */
+
+.cms-module-placement {
+	position: relative;
+}
+.cms-module-placement .edit-control {
+	position: absolute;
+	right: 0;
+	text-align: right;
+	background: $control_bg;
+	color: #eee;
+	line-height: 30px;
+	font-size: 14px;
+	padding: 0 10px 0 30px;
+	background-image: url(../images/icons/edit.png);
+	background-repeat: no-repeat;
+	@include border-radius-bottom-left(6px);
+	cursor: pointer; /* It's a faaaaaake. */
+}
+.cms-module-placement .edit-control.hide {
+	display: none;
+	opacity: 0;
+}
+

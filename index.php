@@ -15,20 +15,26 @@
 				<ul class="date-selection">
 					<li class="button prev"><a href="#">&laquo;</a></li>
 					<li class="zoom-control time"><a href="#">9:00am</a></li>
-					<li class="zoom-control day"><a href="#">16th</a></li>
+					<li class="zoom-control day"><a href="#">26th</a></li>
 					<li class="zoom-control month selected"><a href="#">July</a></li>
 					<li class="zoom-control year selected"><a href="#">2011</a></li>
 					<li class="button next"><a href="#">&raquo;</a></li>
 				</ul>
 
-				<div class="timeline-container zoom-month">
+				<div class="timeline-container zoom-month zoom-month-30">
 					<div class="period-container">
-						<div class="period"><span class="title">1</span></div>
-						<div class="period"><span class="title">2</span></div>
-						<div class="period"><span class="title">3</span></div>
-						<div class="period"><span class="title">4</span></div>
+						<?php 
+							for ($ii = 1; $ii <= 30; $ii++ ) {
+								$sLast = ($ii == 30 ? 'last' : '');
+								?>
+								<div class="period <?php echo $sLast; ?>"><span class="title"><?php echo $ii; ?></span></div>
+								<?php
+							}
+						?>
 					</div>
-					<div class="bar"></div>
+					<div class="bar">
+						<div class="control"></div>
+					</div>
 					<div class="snapshot-container">
 						<a class="snapshot" href="#">2010-08-10 10:00am</a>
 					</div>
@@ -122,6 +128,7 @@
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="js/dragdealer.js"></script>
 	<script type="text/javascript" src="js/controls.js"></script>
 </body>
 </html>

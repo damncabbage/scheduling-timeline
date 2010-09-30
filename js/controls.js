@@ -20,6 +20,9 @@ $(document).ready(function(){
 	//$('#cms-toolbox').addClass('hide').css('top', '-'+cmsToolboxContentsHeight);
 
 
+	/* Slider */
+
+
 
 
 	/* Dummy Edit Controls */
