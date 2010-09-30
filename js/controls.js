@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 
 	/* Controls are initially turned off; degrade gracefully so that control is still usable with no JS. */
-	//$('#cms-toolbox').addClass('hide').css('top', '-'+cmsToolboxContentsHeight);
+	$('#cms-toolbox').addClass('hide').css('top', '-'+cmsToolboxContentsHeight);
 
 
 	/* Slider */
