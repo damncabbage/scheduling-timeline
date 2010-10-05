@@ -86,6 +86,7 @@ $control_bg: #2b2b2b;
 	.timeline-container {
 		clear: both;
 		margin: 0px auto;
+		width: 91.5%;
 		padding: 7px 0;
 		overflow: hidden;
 	}
@@ -122,9 +123,9 @@ $control_bg: #2b2b2b;
 		}
 	}
 
-	.period-container {
+	/*.period-container {
 		margin-left: 3%;
-	}
+	}*/
 	.period {
 		float: left;
 		height: 24px;
