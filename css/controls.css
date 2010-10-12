@@ -52,70 +52,98 @@
 
 #cms-toolbox .scheduling {
   padding: 5px 0;
-  /*.period-container {
-  	margin-left: 3%;
-  }*/ }
-  #cms-toolbox .scheduling ul.date-selection {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 14px; }
-    #cms-toolbox .scheduling ul.date-selection li {
-      display: inline; }
+  	/*
+  	.snapshot-container {
+  		position: relative;
+  		top: -24px;
+  		.snapshot {
+  			display: block;
+  			@include border-radius(6px);
+  			width: 12px;
+  			height: 12px;
+  			background: #6a888b;
+  			position: absolute;
+  			left: 100px;
+  			overflow: hidden;
+  			text-indent: -9999px;
+  			&:hover {
+  				background: #92bbbf;
+  			}
+  		}
+  	}
+  
+  	.period-container {
+  		margin-left: 3%;
+  	}
+  	.period {
+  		float: left;
+  		height: 24px;
+  		border-left: 1px solid #5b5b5b;
+  		border-right: 1px solid #3b3b3b;
+  		&.last {
+  			border-right: 1px solid #5a5a5a;
+  		}
+  		.title {
+  			color: #7b7b7b;
+  			display: block;
+  			text-align: center;
+  			font-size: 10px;
+  			position: absolute;
+  			top: -15px;
+  		}
+  	}
+  	.zoom-month-30 .period {
+  		width: 3.05%
+  	}
+  	*/ }
   #cms-toolbox .scheduling .timeline-container {
     clear: both;
     margin: 0px auto;
-    width: 91.5%;
     padding: 7px 0;
     overflow: hidden; }
-  #cms-toolbox .scheduling .bar {
-    clear: both;
-    height: 1px;
-    border-top: 1px solid #5b5b5b;
-    background: #343434;
-    margin: 5px 0;
-    position: relative;
-    top: -12px; }
-  #cms-toolbox .scheduling .snapshot-container {
-    position: relative;
-    top: -24px; }
-    #cms-toolbox .scheduling .snapshot-container .snapshot {
-      /* It's a circle. */
-      display: block;
-      border-radius: 6px;
-      -moz-border-radius: 6px;
-      -webkit-border-radius: 6px;
-      width: 12px;
-      height: 12px;
-      /*background: #51686b;*/
-      background: #6a888b;
-      position: absolute;
-      left: 100px;
-      overflow: hidden;
-      text-indent: -9999px; }
-      #cms-toolbox .scheduling .snapshot-container .snapshot:hover {
-        background: #92bbbf; }
-  #cms-toolbox .scheduling .period {
-    float: left;
-    height: 24px;
-    border-left: 1px solid #5b5b5b;
-    border-right: 1px solid #3b3b3b; }
-    #cms-toolbox .scheduling .period.last {
-      border-right: 1px solid #5a5a5a; }
-    #cms-toolbox .scheduling .period .title {
-      color: #7b7b7b;
-      display: block;
-      text-align: center;
-      font-size: 10px;
-      position: absolute;
-      top: -15px; }
-  #cms-toolbox .scheduling .zoom-month-30 .period {
-    width: 3.05%; }
+    #cms-toolbox .scheduling .timeline-container .rail {
+      background-repeat: repeat-x;
+      height: 58px;
+      width: 3000px;
+      position: relative;
+      left: -50px; }
+      #cms-toolbox .scheduling .timeline-container .rail.zoom-month {
+        background-image: url("../images/scheduling/rail.zoom-month.png"); }
+      #cms-toolbox .scheduling .timeline-container .rail .control {
+        width: 23px;
+        height: 26px;
+        position: absolute;
+        top: 20px;
+        left: 90px;
+        background-image: url("../images/scheduling/control.png"); }
+      #cms-toolbox .scheduling .timeline-container .rail .snapshot {
+        background-image: url("../images/scheduling/pins.png");
+        width: 13px;
+        height: 28px;
+        position: absolute;
+        text-indent: -9999999px;
+        top: 3px; }
+        #cms-toolbox .scheduling .timeline-container .rail .snapshot.now {
+          background-position: -14px 0; }
+          #cms-toolbox .scheduling .timeline-container .rail .snapshot.now.active {
+            background-position: 0 0; }
+          #cms-toolbox .scheduling .timeline-container .rail .snapshot.now:hover {
+            background-position: -28px 0; }
+        #cms-toolbox .scheduling .timeline-container .rail .snapshot.future {
+          background-position: -56px 0; }
+          #cms-toolbox .scheduling .timeline-container .rail .snapshot.future.active {
+            background-position: -42px 0; }
+          #cms-toolbox .scheduling .timeline-container .rail .snapshot.future:hover {
+            background-position: -70px 0; }
 
 #cms-toolbox .scheduling .date-selection {
+  text-align: center;
+  font-size: 14px;
   margin: 0 auto;
   display: block;
   width: 430px; }
+  #cms-toolbox .scheduling .date-selection li {
+    display: inline; }
   #cms-toolbox .scheduling .date-selection a {
     color: #ababab;
     border-radius: 4px;

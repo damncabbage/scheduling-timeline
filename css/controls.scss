@@ -73,45 +73,60 @@ $control_bg: #2b2b2b;
 #cms-toolbox .scheduling {
 	padding: 5px 0;
 
-	ul.date-selection {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-		font-size: 14px;
-		li {
-			display: inline;
-		}
-	}
-
 	.timeline-container {
 		clear: both;
 		margin: 0px auto;
-		width: 91.5%;
 		padding: 7px 0;
 		overflow: hidden;
-	}
-	.bar {
-		clear: both;
-		height: 1px;
-		border-top: 1px solid #5b5b5b;
-		background: #343434;
-		margin: 5px 0;
-		position: relative;
-		top: -12px;
-		.control {
+		.rail {
+			background-repeat: repeat-x;
+			height: 58px;
+			width: 3000px;
+			position: relative;
+			left: -50px;
+			&.zoom-month {
+				background-image: url('../images/scheduling/rail.zoom-month.png');
+			}
+
+			.control {
+				width: 23px;
+				height: 26px;
+				position: absolute;
+				top: 20px;
+				left: 90px;
+				background-image: url('../images/scheduling/control.png');
+			}
+
+			.snapshot {
+				background-image: url('../images/scheduling/pins.png');
+				width: 13px;
+				height: 28px;
+				position: absolute;
+				text-indent: -9999999px;
+				top: 3px;
+				&.now {
+					background-position: -14px 0;
+					&.active { background-position: 0 0; }
+					&:hover  { background-position: -28px 0; }
+				}
+				&.future {
+					background-position: -56px 0;
+					&.active { background-position: -42px 0; }
+					&:hover  { background-position: -70px 0; }
+				}
+			}
 		}
 	}
 
+	/*
 	.snapshot-container {
 		position: relative;
 		top: -24px;
 		.snapshot {
-			/* It's a circle. */
 			display: block;
 			@include border-radius(6px);
 			width: 12px;
 			height: 12px;
-			/*background: #51686b;*/
 			background: #6a888b;
 			position: absolute;
 			left: 100px;
@@ -123,9 +138,9 @@ $control_bg: #2b2b2b;
 		}
 	}
 
-	/*.period-container {
+	.period-container {
 		margin-left: 3%;
-	}*/
+	}
 	.period {
 		float: left;
 		height: 24px;
@@ -146,12 +161,20 @@ $control_bg: #2b2b2b;
 	.zoom-month-30 .period {
 		width: 3.05%
 	}
+	*/
 }
 
 #cms-toolbox .scheduling .date-selection {
+	text-align: center;
+	font-size: 14px;
 	margin: 0 auto;
 	display: block;
 	width: 430px;
+
+	li {
+		display: inline;
+	}
+
 	a {
 		color: #ababab;
 		@include border-radius(4px);

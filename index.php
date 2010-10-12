@@ -21,22 +21,19 @@
 					<li class="button next"><a href="#">&raquo;</a></li>
 				</ul>
 
-				<div class="timeline-container zoom-month zoom-month-30">
-					<div class="period-container">
+				<div class="timeline-container">
+					<div class="rail zoom-month">
+						<a class="snapshot now" href="#" style="left: 90px;">2010-08-10 10:00am</a>
+						<a class="snapshot future" href="#" style="left: 150px">2010-08-12 10:00am</a>
 						<?php 
 							for ($ii = 1; $ii <= 30; $ii++ ) {
 								$sLast = ($ii == 30 ? 'last' : '');
-								?>
+								/*? >
 								<div class="period <?php echo $sLast; ?>"><span class="title"><?php echo $ii; ?></span></div>
-								<?php
+								< ?php*/
 							}
 						?>
-					</div>
-					<div class="bar">
 						<div class="control"></div>
-					</div>
-					<div class="snapshot-container">
-						<a class="snapshot" href="#">2010-08-10 10:00am</a>
 					</div>
 				</div>
 
